@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(180deg, #EEAECA, #9BBAE7);
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    text-align: center;
+    user-select: none;
+  }
+  h1 {
+    margin: 20px;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+  }
+  #bin {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 70px;
+    /* background: rgba(231, 227, 227, 0.6); */
+    background-color: rgba(238, 232, 232, 0.5);
+    border-radius: 20px;
+    padding: 10px;
+    transition: transform 0.2s;
+  }
+  #message, #level {
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    margin: 10px;
+  }
+  .trash {
+    position: absolute;
+    cursor: grab;
+    transition: transform 0.2s;
+  }
+  .wiggle {
+    animation: wiggle 0.3s infinite;
+  }
+  @keyframes wiggle {
+    0% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+    100% { transform: rotate(-5deg); }
+  }
+  @media (max-width: 768px) {
+    h1 { font-size: 20px; }
+    #bin { font-size: 50px; }
+    .trash { font-size: 40px !important; }
+  }
